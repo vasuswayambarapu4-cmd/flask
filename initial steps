@@ -1,0 +1,34 @@
+fundmental steps of flask and how to use
+🔧 How to Run
+
+Install Flask:
+
+pip install flask
+
+
+Save the code in app.py
+
+Run:
+
+python app.py
+
+
+API runs at:
+http://127.0.0.1:5000
+
+🧪 Test Using Curl or Postman
+✔️ Get all users
+curl http://127.0.0.1:5000/users
+
+✔️ Add a new user
+curl -X POST -H "Content-Type: application/json" \
+-d '{"name": "Charlie", "email": "charlie@example.com"}' \
+http://127.0.0.1:5000/users
+
+✔️ Update a user
+curl -X PUT -H "Content-Type: application/json" \
+-d '{"email": "new@example.com"}' \
+http://127.0.0.1:5000/users/1
+
+✔️ Delete a user
+curl -X DELETE http://127.0.0.1:5000/users/1
